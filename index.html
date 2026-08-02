@@ -1,20 +1,9 @@
-<!index.html html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>iot-wifi.com | দ্রুত ইন্টারনেট ও বিল পেমেন্ট</title>
-<meta name="description" content="iot-wifi.com - দ্রুত ও নিরাপদ ইন্টারনেট সার্ভিস। 5 Mbps মাত্র 200 টাকা, 10 Mbps 300 টাকা। বিকাশ, নগদ, রকেট দিয়ে সহজে বিল পরিশোধ করুন।">
-<meta name="keywords" content="ABC WiFi, WiFi Bill Payment, বিকাশ বিল, নগদ বিল, রকেট বিল, সস্তা ইন্টারনেট, ফাস্ট WiFi">
-<meta name="author" content="ABC WiFi Network">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph (Facebook / Messenger এ সুন্দর দেখাবে) -->
-<meta property="og:title" content="iot-wifi.com | দ্রুত ইন্টারনেট">
-<meta property="og:description" content="5 Mbps মাত্র 200৳ | 10 Mbps 300৳ | বিকাশ, নগদ, রকেট দিয়ে সহজে বিল পরিশোধ">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="bn_BD">
-
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -39,27 +28,17 @@ body {
 .container::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     height: 6px;
     background: linear-gradient(90deg, #e2136e, #007bff, #25D366);
 }
-.logo { text-align: center; margin-bottom: 22px; }
-.logo h1 { 
-    color: #0a192f; 
-    font-size: 26px; 
-    margin-bottom: 4px;
-    font-weight: 800;
-}
-.logo p { color: #64748b; font-size: 14px; }
+.logo-img { text-align: center; margin-bottom: 10px; }
+.logo-img img { width: 100px; height: auto; border-radius: 12px; }
+.logo { text-align: center; margin-bottom: 18px; }
+.logo h1 { color: #0a192f; font-size: 22px; margin-bottom: 4px; font-weight: 800; }
+.logo p { color: #64748b; font-size: 13px; }
 .package-section { margin: 18px 0; }
-.package-section h3 { 
-    text-align: center; 
-    margin-bottom: 14px; 
-    font-size: 16px;
-    color: #1e293b;
-}
+.package-section h3 { text-align: center; margin-bottom: 14px; font-size: 16px; color: #1e293b; }
 .package {
     background: linear-gradient(135deg, #ecfdf5, #d1fae5);
     border: 1px solid #a7f3d0;
@@ -96,15 +75,9 @@ body {
     margin: 11px 0;
     border: 1px solid #e2e8f0;
 }
-.card-top {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 11px;
-}
+.card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 11px; }
 .card .icon {
-    width: 44px;
-    height: 44px;
+    width: 44px; height: 44px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -119,16 +92,8 @@ body {
 .rocket-icon { background: linear-gradient(135deg, #8c3494, #6b2d7b); }
 .card .details { flex: 1; }
 .card .details b { display: block; color: #1e293b; margin-bottom: 3px; font-size: 14px; }
-.card .details span { 
-    color: #0f172a; 
-    font-size: 18px; 
-    font-weight: 700; 
-    letter-spacing: 0.5px;
-}
-.btn-row {
-    display: flex;
-    gap: 8px;
-}
+.card .details span { color: #0f172a; font-size: 18px; font-weight: 700; }
+.btn-row { display: flex; gap: 8px; }
 .btn-row button, .btn-row a {
     flex: 1;
     padding: 10px 0;
@@ -145,46 +110,121 @@ body {
 .pay-btn { background: #e2136e; }
 .nagad-btn { background: #f6911d; }
 .rocket-btn { background: #8c3494; }
-.note { 
-    text-align: center; 
-    margin: 18px 0 14px; 
-    color: #475569; 
-    font-size: 14px; 
+.show-form-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 22px 0 10px;
 }
-.whatsapp-btn {
+.form-section {
+    display: none;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px 0;
+}
+.form-section h3 { text-align: center; margin-bottom: 18px; color: #166534; font-size: 17px; }
+.form-group { margin-bottom: 15px; }
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+}
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+}
+.form-group input:disabled, .form-group select:disabled {
+    background: #f1f5f9;
+    color: #94a3b8;
+}
+.small-note { font-size: 12.5px; color: #64748b; margin-top: 4px; }
+.trx-options { display: flex; gap: 10px; margin-bottom: 12px; }
+.trx-options label {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.trx-options input[type="radio"] { display: none; }
+.trx-options input[type="radio"]:checked + label {
+    background: #dcfce7;
+    border-color: #16a34a;
+    color: #166534;
+    font-weight: 700;
+}
+#screenshotPreview { display: none; margin-top: 10px; text-align: center; }
+#screenshotPreview img {
+    max-width: 100%;
+    max-height: 180px;
+    border-radius: 10px;
+    border: 2px solid #86efac;
+}
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #166534, #4ade80);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.note {
+    text-align: center;
+    margin: 20px 0 16px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    border: 2px solid #ef4444;
+    border-radius: 12px;
+    color: #991b1b;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.note span {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    color: #b91c1c;
+}
+.whatsapp-btn, .messenger-btn {
     display: block;
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: #fff;
     border-radius: 10px;
     font-size: 15px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    margin: 10px 0;
+    color: white;
 }
-.messenger-btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #0084ff, #0066cc);
-    color: #fff;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 8px;
-    box-shadow: 0 4px 12px rgba(0, 132, 255, 0.3);
-}
-.footer { 
-    text-align: center; 
-    margin-top: 14px; 
-    font-size: 12px; 
-    color: #94a3b8; 
-}
+.whatsapp-btn { background: linear-gradient(135deg, #25D366, #128C7E); }
+.messenger-btn { background: linear-gradient(135deg, #0084ff, #0066cc); }
+.footer { text-align: center; margin-top: 14px; font-size: 12px; color: #94a3b8; }
 .toast {
     position: fixed;
     bottom: 30px;
@@ -196,15 +236,18 @@ body {
     border-radius: 10px;
     font-size: 14px;
     display: none;
-    z-index: 999;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
 }
 </style>
 </head>
 <body>
+
 <div class="container">
+    <div class="logo-img">
+        <img src="https://i.postimg.cc/D0FSPGDv/file-00000000ea081f7898804044e4d7456.jpg" alt="IOT WiFi Logo">
+    </div>
     <div class="logo">
-        <h1>iot-wifi.com </h1>
+        <h1>iot-wifi.com</h1>
         <p>দ্রুত • নিরাপদ • সস্তা ইন্টারনেট</p>
     </div>
 
@@ -220,9 +263,7 @@ body {
         </div>
     </div>
 
-    <div class="info">
-        WiFi বিল পরিশোধের জন্য নিচের যেকোনো নম্বরে টাকা পাঠান
-    </div>
+    <div class="info">WiFi বিল পরিশোধের জন্য নিচের যেকোনো নম্বরে টাকা পাঠান</div>
 
     <!-- বিকাশ -->
     <div class="card">
@@ -230,12 +271,12 @@ body {
             <div class="icon bkash-icon">bKash</div>
             <div class="details">
                 <b>বিকাশ (Personal)</b>
-                <span>01907142399</span>
+                <span>01XXXXXXXXX</span>
             </div>
         </div>
         <div class="btn-row">
-            <button class="copy-btn" onclick="copyNumber('01907142399')">কপি</button>
-            <a class="pay-btn" href="intent://#Intent;scheme=bKash;package=com.bKash.customerapp;end">বিকাশ </a>
+            <button class="copy-btn" onclick="copyNumber('01XXXXXXXXX')">কপি</button>
+            <a class="pay-btn" href="intent://#Intent;scheme=bKash;package=com.bKash.customerapp;end">বিকাশ</a>
         </div>
     </div>
 
@@ -245,12 +286,12 @@ body {
             <div class="icon nagad-icon">নগদ</div>
             <div class="details">
                 <b>নগদ (Personal)</b>
-                <span>01577261219</span>
+                <span>01XXXXXXXXX</span>
             </div>
         </div>
         <div class="btn-row">
-            <button class="copy-btn" onclick="copyNumber('0101577261219')">কপি</button>
-            <a class="nagad-btn" href="intent://#Intent;scheme=nagad;package=com.konasl.nagad;end">নগদ </a>
+            <button class="copy-btn" onclick="copyNumber('01XXXXXXXXX')">কপি</button>
+            <a class="nagad-btn" href="intent://#Intent;scheme=nagad;package=com.konasl.nagad;end">নগদ</a>
         </div>
     </div>
 
@@ -260,52 +301,280 @@ body {
             <div class="icon rocket-icon">Rocket</div>
             <div class="details">
                 <b>রকেট (Personal)</b>
-                <span>01577261219-9 </span>
+                <span>01XXXXXXXXX</span>
             </div>
         </div>
         <div class="btn-row">
-            <button class="copy-btn" onclick="copyNumber('01577261219-9')">কপি</button>
-            <a class="rocket-btn" href="intent://#Intent;scheme=rocket;package=com.dbbl.mbs.apps.main;end">রকেট </a>
+            <button class="copy-btn" onclick="copyNumber('01XXXXXXXXX')">কপি</button>
+            <a class="rocket-btn" href="intent://#Intent;scheme=rocket;package=com.dbbl.mbs.apps.main;end">রকেট</a>
         </div>
     </div>
 
-    <p class="note">টাকা পাঠানোর পর অবশ্যই আমাদের সাথে যোগাযোগ করুন</p>
+    <button class="show-form-btn" onclick="showPaymentForm()">
+        📤 পেমেন্ট তথ্য পাঠাতে এখানে ক্লিক করুন
+    </button>
 
-    
-    <a href="https://wa.me/8801577261219" class="whatsapp-btn" target="_blank">
+    <div class="form-section" id="paymentForm">
+        <h3>📤 পেমেন্ট তথ্য পাঠান</h3>
+        
+        <div class="form-group">
+            <label>কত Mbps নিবেন?</label>
+            <select id="package" onchange="autoFillAmount()">
+                <option value="">-- সিলেক্ট করুন --</option>
+                <option value="5 Mbps">5 Mbps (২০০ টাকা)</option>
+                <option value="10 Mbps">10 Mbps (৩০০ টাকা)</option>
+                <option value="Custom">অন্যান্য</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Amount (টাকা)</label>
+            <input type="number" id="amount" placeholder="যেমন: 200" min="1">
+        </div>
+
+        <div class="form-group">
+            <label>ফোনের ব্র্যান্ড</label>
+            <select id="phoneBrand" onchange="updatePhoneModels()">
+                <option value="">-- ব্র্যান্ড সিলেক্ট করুন --</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Xiaomi">Xiaomi / Redmi</option>
+                <option value="Realme">Realme</option>
+                <option value="Oppo">Oppo</option>
+                <option value="Vivo">Vivo</option>
+                <option value="Apple">Apple (iPhone)</option>
+                <option value="Tecno">Tecno</option>
+                <option value="Infinix">Infinix</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Symphony">Symphony</option>
+                <option value="Walton">Walton</option>
+                <option value="Nokia">Nokia</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Other">অন্যান্য</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>ফোনের মডেল</label>
+            <select id="phoneModel" disabled>
+                <option value="">-- আগে ব্র্যান্ড সিলেক্ট করুন --</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>কোন মাধ্যমে টাকা পাঠিয়েছেন?</label>
+            <select id="paymentMethod" onchange="updateTrxHint()">
+                <option value="">-- সিলেক্ট করুন --</option>
+                <option value="bKash">বিকাশ (bKash)</option>
+                <option value="Nagad">নগদ (Nagad)</option>
+                <option value="Rocket">রকেট (Rocket)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Transaction ID কিভাবে দিবেন?</label>
+            <div class="trx-options">
+                <input type="radio" name="trxType" id="trxText" value="text" checked onchange="toggleTrxInput()">
+                <label for="trxText">✍️ লিখে দিব</label>
+                <input type="radio" name="trxType" id="trxScreenshot" value="screenshot" onchange="toggleTrxInput()">
+                <label for="trxScreenshot">🖼️ Screenshot দিব</label>
+            </div>
+
+            <div id="trxTextField">
+                <input type="text" id="trxId" placeholder="আগে মাধ্যম সিলেক্ট করুন" maxlength="20" disabled>
+                <div class="small-note" id="trxHint">প্রথমে কোন মাধ্যমে পাঠিয়েছেন সিলেক্ট করুন</div>
+            </div>
+
+            <div id="trxScreenshotField" style="display:none;">
+                <input type="file" id="screenshotInput" accept="image/*" onchange="previewScreenshot(event)">
+                <div id="screenshotPreview">
+                    <img id="previewImg" src="" alt="Preview">
+                    <div class="small-note" style="margin-top:8px;">Screenshot সিলেক্ট হয়েছে</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="send-btn" onclick="sendPaymentInfo()">সব তথ্য WhatsApp-এ পাঠান</button>
+    </div>
+
+    <p class="note">
+        ⚠️ টাকা পাঠানোর পর অবশ্যই তথ্য পাঠাতে হবে
+        <span>উপরের বাটনে ক্লিক করে Transaction ID বা Screenshot পাঠান</span>
+    </p>
+
+    <a href="https://wa.me/8801XXXXXXXXX" class="whatsapp-btn" target="_blank">
         💬 WhatsApp এ যোগাযোগ করুন
     </a>
 
-    <a href="https://www.facebook.com/share/1CaPs6AQCx/" class="messenger-btn" target="_blank">
+    <a href="https://m.me/yourpage" class="messenger-btn" target="_blank">
         💙 Messenger এ যোগাযোগ করুন
     </a>
 
-    <div class="footer">© 2026 iot-wifi.network • All Rights Reserved</div>
+    <div class="footer">© 2026 ABC WiFi Network • All Rights Reserved</div>
 </div>
 
 <div class="toast" id="toast">নম্বর কপি হয়েছে!</div>
 
 <script>
-function copyNumber(number) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(number).then(showToast);
-    } else {
-        var input = document.createElement('input');
-        input.value = number;
-        document.body.appendChild(input);
-        input.select();
-        document.execCommand('copy');
-        document.body.removeChild(input);
-        showToast();
+const phoneModels = {
+    "Samsung": ["Galaxy A05","Galaxy A05s","Galaxy A06","Galaxy A15","Galaxy A16","Galaxy A25","Galaxy A26","Galaxy A35","Galaxy A36","Galaxy A55","Galaxy A56","Galaxy M15","Galaxy M35","Galaxy M55","Galaxy S21","Galaxy S22","Galaxy S23","Galaxy S24","Galaxy S25","অন্যান্য Samsung"],
+    "Xiaomi": ["Redmi A2","Redmi A3","Redmi 12","Redmi 13","Redmi 13C","Redmi 14C","Redmi Note 12","Redmi Note 13","Redmi Note 14","Poco M6","Poco X6","অন্যান্য Xiaomi"],
+    "Realme": ["Realme C51","Realme C53","Realme C55","Realme C65","Realme 12","Realme 13","অন্যান্য Realme"],
+    "Oppo": ["Oppo A18","Oppo A38","Oppo A59","Oppo A78","Oppo Reno 11","Oppo Reno 12","অন্যান্য Oppo"],
+    "Vivo": ["Vivo Y02","Vivo Y18","Vivo Y27","Vivo Y28","Vivo V30","Vivo V40","অন্যান্য Vivo"],
+    "Apple": ["iPhone 11","iPhone 12","iPhone 13","iPhone 14","iPhone 15","iPhone 16","অন্যান্য iPhone"],
+    "Tecno": ["Tecno Spark 20","Tecno Spark 30","Tecno Camon 30","Tecno Pova 6","অন্যান্য Tecno"],
+    "Infinix": ["Infinix Hot 40","Infinix Hot 50","Infinix Note 40","Infinix Note 50","অন্যান্য Infinix"],
+    "Huawei": ["Huawei Nova 11","Huawei Nova 12","Huawei P60","অন্যান্য Huawei"],
+    "Symphony": ["Symphony Z40","Symphony Z45","Symphony i75","অন্যান্য Symphony"],
+    "Walton": ["Walton Primo R8","Walton Primo R9","Walton Primo R10","অন্যান্য Walton"],
+    "Nokia": ["Nokia C22","Nokia G21","Nokia G22","অন্যান্য Nokia"],
+    "OnePlus": ["OnePlus Nord CE 3","OnePlus Nord 3","OnePlus 12","অন্যান্য OnePlus"],
+    "Motorola": ["Moto G34","Moto G54","Moto G64","অন্যান্য Motorola"],
+    "Other": ["অন্যান্য মডেল"]
+};
+
+function autoFillAmount() {
+    var pkg = document.getElementById('package').value;
+    var amount = document.getElementById('amount');
+    if (pkg === '5 Mbps') amount.value = 200;
+    else if (pkg === '10 Mbps') amount.value = 300;
+    else amount.value = '';
+}
+
+function updatePhoneModels() {
+    var brand = document.getElementById('phoneBrand').value;
+    var modelSelect = document.getElementById('phoneModel');
+    modelSelect.innerHTML = '';
+    if (!brand) {
+        modelSelect.disabled = true;
+        modelSelect.innerHTML = '<option value="">-- আগে ব্র্যান্ড সিলেক্ট করুন --</option>';
+        return;
+    }
+    modelSelect.disabled = false;
+    modelSelect.innerHTML = '<option value="">-- মডেল সিলেক্ট করুন --</option>';
+    var models = phoneModels[brand] || ["অন্যান্য মডেল"];
+    for (var i = 0; i < models.length; i++) {
+        var opt = document.createElement('option');
+        opt.value = models[i];
+        opt.textContent = models[i];
+        modelSelect.appendChild(opt);
     }
 }
-function showToast() {
+
+function showPaymentForm() {
+    document.getElementById('paymentForm').style.display = 'block';
+    document.getElementById('paymentForm').scrollIntoView({behavior: 'smooth'});
+}
+
+function copyNumber(number) {
+    // মোবাইলে ভালো কাজ করার জন্য
+    var temp = document.createElement('textarea');
+    temp.value = number;
+    temp.style.position = 'fixed';
+    temp.style.left = '-9999px';
+    document.body.appendChild(temp);
+    temp.select();
+    temp.setSelectionRange(0, 99999);
+    try {
+        document.execCommand('copy');
+        showToast('নম্বর কপি হয়েছে!');
+    } catch (err) {
+        showToast('কপি করা যায়নি, ম্যানুয়ালি কপি করুন');
+    }
+    document.body.removeChild(temp);
+}
+
+function showToast(msg) {
     var toast = document.getElementById('toast');
+    toast.textContent = msg;
     toast.style.display = 'block';
     setTimeout(function() {
         toast.style.display = 'none';
     }, 2000);
 }
-</script>
-</body>
-</html>
+
+function toggleTrxInput() {
+    var isText = document.getElementById('trxText').checked;
+    document.getElementById('trxTextField').style.display = isText ? 'block' : 'none';
+    document.getElementById('trxScreenshotField').style.display = isText ? 'none' : 'block';
+}
+
+function updateTrxHint() {
+    var method = document.getElementById('paymentMethod').value;
+    var trxInput = document.getElementById('trxId');
+    var hint = document.getElementById('trxHint');
+    if (!method) {
+        trxInput.disabled = true;
+        trxInput.placeholder = 'আগে মাধ্যম সিলেক্ট করুন';
+        hint.textContent = 'প্রথমে কোন মাধ্যমে পাঠিয়েছেন সিলেক্ট করুন';
+        return;
+    }
+    trxInput.disabled = false;
+    if (method === 'bKash') {
+        trxInput.placeholder = 'bKash TrxID লিখুন';
+        hint.textContent = 'bKash Transaction ID দিন';
+    } else if (method === 'Nagad') {
+        trxInput.placeholder = 'Nagad TrxID লিখুন';
+        hint.textContent = 'নগদ Transaction ID দিন';
+    } else {
+        trxInput.placeholder = 'Rocket TrxID লিখুন';
+        hint.textContent = 'রকেট Transaction ID দিন';
+    }
+}
+
+function previewScreenshot(event) {
+    var file = event.target.files[0];
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('previewImg').src = e.target.result;
+            document.getElementById('screenshotPreview').style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+function sendPaymentInfo() {
+    var pkg = document.getElementById('package').value;
+    var amount = document.getElementById('amount').value;
+    var brand = document.getElementById('phoneBrand').value;
+    var model = document.getElementById('phoneModel').value;
+    var method = document.getElementById('paymentMethod').value;
+    var isText = document.getElementById('trxText').checked;
+    var trxId = document.getElementById('trxId').value.trim();
+
+    if (!pkg) { alert('কত Mbps নিবেন সিলেক্ট করুন'); return; }
+    if (!amount) { alert('Amount লিখুন'); return; }
+    if (!brand) { alert('ফোনের ব্র্যান্ড সিলেক্ট করুন'); return; }
+    if (!model) { alert('ফোনের মডেল সিলেক্ট করুন'); return; }
+    if (!method) { alert('পেমেন্ট মাধ্যম সিলেক্ট করুন'); return; }
+
+    if (isText) {
+        if (!trxId) { alert('Transaction ID লিখুন'); return; }
+    } else {
+        var fileInput = document.getElementById('screenshotInput');
+        if (!fileInput.files || !fileInput.files[0]) {
+            alert('Screenshot সিলেক্ট করুন');
+            return;
+        }
+    }
+
+    var message = '*iot-wifi.com পেমেন্ট তথ্য*\n\n';
+    message += '📦 প্যাকেজ: ' + pkg + '\n';
+    message += '💰 Amount: ' + amount + ' টাকা\n';
+    message += '📱 ফোন: ' + brand + ' - ' + model + '\n';
+    message += '💳 মাধ্যম: ' + method + '\n';
+
+    if (isText) {
+        message += '🔢 TrxID: ' + trxId + '\n';
+    } else {
+        message += '🖼️ Screenshot পাঠানো হয়েছে (নিচে অ্যাটাচ করুন)\n';
+    }
+    message += '\n---\nতথ্য পাঠানো হয়েছে';
+
+    // এখানে তোমার WhatsApp নম্বর দাও
+    var whatsappNumber = '8801XXXXXXXXX';
+
+    var url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+    window.open(url, '
